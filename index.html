@@ -275,7 +275,7 @@
   }
   .service-grid{
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2px;
     background: var(--line);
     border: 1px solid var(--line);
@@ -287,6 +287,19 @@
     transition: background 0.25s ease;
   }
   .service-card:hover{ background: #221130; }
+  .service-card.featured{
+    background: linear-gradient(160deg, #3A1440 0%, var(--ink) 70%);
+  }
+  .service-card.featured:hover{ background: linear-gradient(160deg, #47184f 0%, #221130 70%); }
+  .service-rank{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    display:block;
+    margin-bottom: 10px;
+  }
   .service-tag{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.72rem;
@@ -563,28 +576,26 @@
 <section class="services" id="services">
   <div class="container">
     <span class="eyebrow">WHAT WE DO</span>
-    <h2>Two worlds, one team</h2>
-    <p>From replacement parts to scheduled upkeep, we cover the essentials for marine and pool equipment owners who need it done right the first time.</p>
+    <h2>Where we focus</h2>
+    <p>From interior detailing to parts sourcing and technical support, we cover what yacht and pool owners need most — in order of what we do best.</p>
     <div class="service-grid">
-      <div class="service-card reveal">
-        <span class="service-tag">Marine / Distribution</span>
-        <h3>Yacht Parts Distribution</h3>
-        <p>Sourcing and supply of yacht components — engine parts, pumps, filters, electrical and deck hardware — for owners, captains, and marinas across the USA.</p>
+      <div class="service-card featured reveal">
+        <span class="service-rank">01 — Core Service</span>
+        <span class="service-tag">Marine / Interior Cleaning</span>
+        <h3>Yacht Interior Cleaning</h3>
+        <p>Deep interior cleaning and detailing for yachts — cabins, upholstery, galley, and living spaces kept spotless and guest-ready, on a one-time or recurring schedule.</p>
       </div>
       <div class="service-card reveal">
-        <span class="service-tag">Pool / Distribution</span>
-        <h3>Pool Parts Distribution</h3>
-        <p>Pumps, filters, heaters, and maintenance chemicals sourced and delivered for residential and commercial pool operators.</p>
+        <span class="service-rank">02 — Distribution</span>
+        <span class="service-tag">Marine &amp; Pool / Parts</span>
+        <h3>Yacht &amp; Pool Parts Supply</h3>
+        <p>Sourcing and distribution of parts for both yachts and pools — pumps, filters, engine components, and hardware delivered to owners, captains, and pool operators across the USA.</p>
       </div>
       <div class="service-card reveal">
-        <span class="service-tag">Marine / Service</span>
-        <h3>Yacht Maintenance</h3>
-        <p>Routine and on-demand maintenance to keep vessels seaworthy — from engine checks to cleaning and detailing.</p>
-      </div>
-      <div class="service-card reveal">
-        <span class="service-tag">Pool / Service</span>
-        <h3>Pool Maintenance</h3>
-        <p>Scheduled cleaning, chemical balancing, and equipment servicing that keeps pools swim-ready year-round.</p>
+        <span class="service-rank">03 — Engineering</span>
+        <span class="service-tag">Marine &amp; Pool / Technical</span>
+        <h3>Yacht &amp; Pool Engineering Services</h3>
+        <p>Technical and engineering support for yachts and pools — diagnostics, repairs, and equipment servicing handled by people who know the systems inside and out.</p>
       </div>
     </div>
   </div>
